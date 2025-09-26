@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d6e6f059.css",
+    "main.js": "/static/js/main.c13753b4.js",
+    "static/js/453.438d9e50.chunk.js": "/static/js/453.438d9e50.chunk.js",
+    "static/media/2.gif": "/static/media/2.f06852273103b9c87681.gif",
+    "static/media/Ronald_Kimutai_Resume.pdf": "/static/media/Ronald_Kimutai_Resume.7ee346007fa1a4b6690a.pdf",
+    "static/media/brillz2.png": "/static/media/brillz2.1db5430dcb661b02a8af.png",
+    "static/media/kca1.png": "/static/media/kca1.5370e8d8b4a6ccd2cd5f.png",
+    "static/media/kca2.png": "/static/media/kca2.cc092ffea48ba4753760.png",
+    "static/media/ronn3.png": "/static/media/ronn3.b4276183d73a81aca111.png",
+    "static/media/kca3.png": "/static/media/kca3.a468a3056330f0bc126e.png",
+    "static/media/ronn1.png": "/static/media/ronn1.07d4f274a7b9b3b8bd07.png",
+    "static/media/3.gif": "/static/media/3.6ab527b969ee15e038ca.gif",
+    "static/media/brillz3.png": "/static/media/brillz3.05a6d32e72ce1be0807d.png",
+    "static/media/ronn2.png": "/static/media/ronn2.48773e469d10f474dc76.png",
+    "static/media/brillz1.png": "/static/media/brillz1.d457ab2e73627444e1c7.png",
+    "index.html": "/index.html",
+    "main.d6e6f059.css.map": "/static/css/main.d6e6f059.css.map",
+    "main.c13753b4.js.map": "/static/js/main.c13753b4.js.map",
+    "453.438d9e50.chunk.js.map": "/static/js/453.438d9e50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6e6f059.css",
+    "static/js/main.c13753b4.js"
+  ]
+}
