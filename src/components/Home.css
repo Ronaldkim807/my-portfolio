@@ -1,0 +1,227 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background GIF with slight brightness boost */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/2.gif') center/cover no-repeat;
+  filter: brightness(1.2); /* Slightly brighter background */
+  z-index: -2;
+}
+
+/* Softer overlay for readability */
+.home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6); /* Softer overlay */
+  z-index: -1;
+}
+
+/* Content Section */
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+  color: white;
+}
+
+/* Main Title */
+.home-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Name Animation - Modern Gradient Style */
+.name-animation {
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Cool modern gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #00c6ff;
+  padding-right: 5px;
+  font-weight: bold;
+  animation: blink 0.7s infinite;
+  text-shadow: none; /* Removed bright glow */
+}
+
+@keyframes blink {
+  0%, 100% { border-color: #00c6ff; }
+  50% { border-color: transparent; }
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffcb6b;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Description */
+.home-description {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn.primary {
+  background: #4a6cf7;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #3a5cd8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+}
+
+.btn.secondary {
+  border: 2px solid #4a6cf7;
+  color: #4a6cf7;
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: #4a6cf7;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #4a6cf7;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  animation: float 5s ease-in-out infinite;
+  background: white;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: rotate(45deg) translate(0, 0); }
+  50% { transform: rotate(45deg) translate(-10px, -10px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 968px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 2.8rem;
+  }
+  
+  .home-buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-title {
+    font-size: 2.2rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .home-description {
+    font-size: 1rem;
+  }
+  
+  .profile-image {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+  
+  .home::before {
+    background-attachment: scroll;
+  }
+}
